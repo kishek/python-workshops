@@ -2,3 +2,6 @@
 **/**.json
 **/**/__pycache__
 **/**/.ipynb_checkpoints
+**/solutions/step-1/**
+**/solutions/step-2/**
+**/solutions/step-3/**

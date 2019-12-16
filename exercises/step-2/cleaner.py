@@ -22,9 +22,10 @@ def getLines(src_file):
     # Open source file and filter application lines.
     with open(src_file) as logFile:
         for line in logFile:
-            matches = search(REGEX_LINE, line)
-            if matches:
-                lines.append(matches.groupdict())
+            # TODO: use the REGEX_LINE above to parse
+            # lines which we want to extract and add them
+            # to the list returned from this function.
+            print(line)
     # Close the file, return all lines we want to analyse.
     logFile.close()
     return lines
@@ -32,9 +33,9 @@ def getLines(src_file):
 
 # Writes formatted lines to a dest file/directory.
 def write_lines(dest_file, lines):
-    file = open(dest_file, 'w')
-    file.write(dumps(lines))
-    file.close()
+    # TODO: write the formatted lines as a list of dictionaries
+    # to the `dest_file` specified.
+    return
 
 
 if __name__ == '__main__':

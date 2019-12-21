@@ -15,15 +15,8 @@ def healthcheck():
 # web APIs, downstream microservices.
 @health_api.route("/deepcheck")
 def deepcheck():
-    evaluation = get_evaluation()
-    if evaluation == False:
-        return 'not ok', 500
+    random_number = randint(1, 10)
+    if random_number % 2 == 0:
+        return 'ok'
     else:
-        return 'ok', 200
-
-
-def get_evaluation():
-    num_random = randint(0, 10)
-    num_remainder = num_random % 2
-    evaluation = (num_remainder == 1)
-    return evaluation
+        return 'not ok', 500

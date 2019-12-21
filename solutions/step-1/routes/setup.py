@@ -8,6 +8,6 @@ setup_api = Blueprint('setup', __name__)
 
 # /: returns a simple HTML document composed of the age-old
 # computing 'check'.
-@setup_api.route("/hello")
+@setup_api.route("/")
 def hello():
     return "Hello, World!"
